@@ -34,17 +34,6 @@ class login :
         except :
             return False
 
-    '''def CompareCode(self) -> bool:
-        try:
-            user_info = spwd.getspnam(self.username)
-            hashed_password, salt = user_info.sp_pwd, user_info.sp_pwdp
-            generated_hash = crypt.crypt(self.password, salt)
-            if generated_hash == hashed_password:
-                return True 
-        except :
-            return False
-        return False'''
-    
     def login(self) -> bool:
         try :
             if self.TesterUser() == True :
