@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/login.css') }}">
+  <title>Document</title>
+</head>
+
+<body>
+  <main>
+    <form action="/adduser" method="POST">
+      <div class="back">
+        <h1>Create User</h1>
+      </div>
+      <div class="back">
+        <label for="">Username</label>
+        <input class="s" type="text" name="username">
+        <label for="">Password</label>
+        <input class="s" type="password" name="password">
+        <label for="">Confirm Password</label>
+        <input class="s" type="password" name="repassword">
+      </div>
+      <div class="erreur">{{erreur}}</div>
+      <div class="form-group">
+        <button class="btn">Create</button>
+      </div>
+    </form>
+  </main>
+</body>
+
+</html>
